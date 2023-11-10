@@ -1,5 +1,8 @@
 # Documentation
-The following contains function definitions and syntax that were utilized in the .py files above to automate email construction. These functions come from the pandas package.
+The following contains function definitions and syntax that were utilized in the .py files above to automate email construction.
+
+## Pandas Package Functions
+In this section, functions originated from the pandas library are defined and syntax is provided.
 
 ### Importing Pandas Package:
 - At the top of the sheet packages must be imported in order to utilize their function libraries
@@ -28,7 +31,7 @@ The following contains function definitions and syntax that were utilized in the
 ### Selecting Greatest Observation in Given Column:
 ```DatasetName = DatasetName.loc[DatasetName[ColumnName].idxmax()]```
 
-
+#
 
 
 

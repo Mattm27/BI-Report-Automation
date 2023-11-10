@@ -1,6 +1,3 @@
-# Documentation
-The following contains function definitions and syntax that were utilized in the .py files above to automate email construction.
-
 ## Pandas Package Functions
 In this section, functions originated from the pandas library are defined and syntax is provided.
 
@@ -31,7 +28,41 @@ In this section, functions originated from the pandas library are defined and sy
 ### Selecting Greatest Observation in Given Column:
 ```DatasetName = DatasetName.loc[DatasetName[ColumnName].idxmax()]```
 
-#
+## Datetime Functions
+Here are definitions and syntax for functions originating from the datetime library
+
+### Importing Datetime Package:
+- Again package must be imported to use built in functions
+```Import datetime as datetime```
+
+### Stripping Time Values From a Date
+```date_obj = datetime.strptime(datename,"%Y-%m-%d %H:%M:%S")```
+
+### Formatt Date to Only Include Certain Elements
+```formatted_date = date_obj.strftime("%m/%d")```
+- Can specify between %m, %d, %Y, %b, %B and others when formatting dates depending on desired outcome
+
+## Custom Functions:
+Below are definitions and syntax for all custom functions created throughout the scripts.
+
+### Podcast Functions
+- up_down is used to print the string either “up” or “down” depending on if the percentage change is either positive or negative
+- sim is used to to determine if the given podcast reached a new historical high in unique listeners and outputs the proper HTML code
+- FBNHelp determines is the Fox Business Hourly Update increased/decreased in unique downloads and unique listeners and outputs the proper HTML code
+- QuarterEndHelp1 has similar functionality to the FBNHelp but inputs are total unique downloads and unique listeners from current and past quarter
+- WhichQ is used to determine the current quarter for the report and converts it to a string to be printed in HTML code
+- QuarterEnd and QuarterEnd1 are used to format email with proper HTML code if it is the end of a quarter
+
+### Social Functions
+- number_one_total is used to keep track of how many months Fox has been ranked #1 in a specific category by updating a external .txt file each time the script is run, either +1 or resetting to 0
+- human_format creates a format to convert the numerics of the report to specify if it is in the Thousands, millions etc.
+
+### Comscore Functions
+- difference is used to determine how many spots an Outkick.com ranking has changed
+- rise_drop returns proper html code depending on whether or not a ranking has increased or decreased
+
+
+
 
 
 

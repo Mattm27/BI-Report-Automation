@@ -2,12 +2,11 @@
 In this section, functions originated from the pandas library are defined and syntax is provided.
 
 ### Importing Pandas Package:
-- At the top of the sheet packages must be imported in order to utilize their function libraries
 ```Import pandas as pd```
 
 ### Loading in Excel Sheets:
-- Used to load in excel files into python. Can also specify specific sheets to work within or number of rows to skip for subsetting 
 ```DatasetName = pd.read_excel(Pathname, sheet_name=sheet, skiprows=number)```
+- Can also specify specific sheets to work within or number of rows to skip for subsetting 
 
 ### Indexing to Specific Row in Column
 ```DatasetName[ColumnName].iloc[index]```
@@ -22,8 +21,8 @@ In this section, functions originated from the pandas library are defined and sy
 ```NewDatasetName= DatasetName.loc[DatasetName[ColumnName] == string parameter]```
 
 ### Selecting Observations That Satisfy Given Parameter:
-- Logical operator can be changed (<,=,!=,>=) and parameter can also be boolean expression (True, False) or a string
 ```DatasetName = DatasetName[DatesetName[ColumnName] > Parameter]```
+- Logical operator can be changed (<,=,!=,>=) and parameter can also be boolean expression (True, False) or a string
 
 ### Selecting Greatest Observation in Given Column:
 ```DatasetName = DatasetName.loc[DatasetName[ColumnName].idxmax()]```
@@ -32,7 +31,6 @@ In this section, functions originated from the pandas library are defined and sy
 Here are definitions and syntax for functions originating from the datetime library
 
 ### Importing Datetime Package:
-- Again package must be imported to use built in functions
 ```Import datetime as datetime```
 
 ### Stripping Time Values From a Date

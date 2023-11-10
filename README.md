@@ -27,7 +27,7 @@ In this section, functions originated from the pandas library are defined and sy
 ### Selecting Greatest Observation in Given Column:
 ```DatasetName = DatasetName.loc[DatasetName[ColumnName].idxmax()]```
 
-## Datetime Functions
+## Datetime Package Functions
 Here are definitions and syntax for functions originating from the datetime library
 
 ### Importing Datetime Package:
@@ -39,6 +39,30 @@ Here are definitions and syntax for functions originating from the datetime libr
 ### Formatt Date to Only Include Certain Elements
 ```formatted_date = date_obj.strftime("%m/%d")```
 - Can specify between %m, %d, %Y, %b, %B and others when formatting dates depending on desired outcome
+
+## HTML tags
+When composing emails, here is how the HTML tags used operate
+
+### <h4></h4>
+- Create a header. Can alsp specify h3,h2,h1 to achieve larger headers
+
+### <p></p>
+- Creates a paragraph
+
+### <u></u>
+- Underlines text within the tag
+
+### <b></b>
+- Bolds text within tag
+
+### <ul</ul>
+- Initializes list
+
+### <li></li>
+- Creates individual bullet points
+
+
+
 
 ## Custom Functions:
 Below are definitions and syntax for all custom functions created throughout the scripts.

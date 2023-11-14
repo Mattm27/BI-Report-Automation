@@ -70,6 +70,7 @@ Below are definitions and syntax for all custom functions created throughout the
 
 ### Podcast Functions
 - up_down is used to print the string either “up” or “down” depending on if the percentage change is either positive or negative
+```
 - sim is used to to determine if the given podcast reached a new historical high in unique listeners and outputs the proper HTML code
 - FBNHelp determines is the Fox Business Hourly Update increased/decreased in unique downloads and unique listeners and outputs the proper HTML code
 - QuarterEndHelp1 has similar functionality to the FBNHelp but inputs are total unique downloads and unique listeners from current and past quarter

@@ -2,43 +2,65 @@
 In this section, functions originated from the pandas library are defined and syntax is provided.
 
 ### Importing Pandas Package:
-```Import pandas as pd```
+```bash
+Import pandas as pd
+```
 
 ### Loading in Excel Sheets:
-```DatasetName = pd.read_excel(Pathname, sheet_name=sheet, skiprows=number)```
+```bash
+DatasetName = pd.read_excel(Pathname, sheet_name=sheet, skiprows=number)
+```
 - Can also specify specific sheets to work within or number of rows to skip for subsetting 
 
 ### Indexing to Specific Row in Column
-```DatasetName[ColumnName].iloc[index]```
+```bash
+DatasetName[ColumnName].iloc[index]
+```
 
 ### Converting Observations in Column to Percentage Format:
-```DatasetName[ColumnName] = DatasetName[ColumnName].transform(lambda x: '{:,.2%}'.format(x))```
+```bash
+DatasetName[ColumnName] = DatasetName[ColumnName].transform(lambda x: '{:,.2%}'.format(x))
+```
 
 ### Renaming Columns:
-```DatatsetName = DatasetName.rename(columns={DatasetName.columns[column#]: NewName})```
+```bash
+DatatsetName = DatasetName.rename(columns={DatasetName.columns[column#]: NewName})
+```
 
 ### Locating and Subsetting Data Frame Based on Column Value:
-```NewDatasetName= DatasetName.loc[DatasetName[ColumnName] == string parameter]```
+```bash
+NewDatasetName= DatasetName.loc[DatasetName[ColumnName] == string parameter]
+```
 
 ### Selecting Observations That Satisfy Given Parameter:
-```DatasetName = DatasetName[DatesetName[ColumnName] > Parameter]```
+```bash
+DatasetName = DatasetName[DatesetName[ColumnName] > Parameter]
+```
 - Logical operator can be changed (<,=,!=,>=) and parameter can also be boolean expression (True, False) or a string
 
 ### Selecting Greatest Observation in Given Column:
-```DatasetName = DatasetName.loc[DatasetName[ColumnName].idxmax()]```
+```bash
+DatasetName = DatasetName.loc[DatasetName[ColumnName].idxmax()]
+```
 
 
 ## Datetime Package Functions
 Here are definitions and syntax for functions originating from the datetime library
 
 ### Importing Datetime Package:
-```Import datetime as datetime```
+```bash
+Import datetime as datetime
+```
 
 ### Stripping Time Values From a Date
-```date_obj = datetime.strptime(datename,"%Y-%m-%d %H:%M:%S")```
+```bash
+date_obj = datetime.strptime(datename,"%Y-%m-%d %H:%M:%S")
+```
 
 ### Formatt Date to Only Include Certain Elements
-```formatted_date = date_obj.strftime("%m/%d")```
+```bash
+formatted_date = date_obj.strftime("%m/%d")
+```
 - Can specify between %m, %d, %Y, %b, %B and others when formatting dates depending on desired outcome
 
 
@@ -70,7 +92,6 @@ Below are definitions and syntax for all custom functions created throughout the
 
 ### Podcast Functions
 - up_down is used to print the string either “up” or “down” depending on if the percentage change is either positive or negative
-```
 - sim is used to to determine if the given podcast reached a new historical high in unique listeners and outputs the proper HTML code
 - FBNHelp determines is the Fox Business Hourly Update increased/decreased in unique downloads and unique listeners and outputs the proper HTML code
 - QuarterEndHelp1 has similar functionality to the FBNHelp but inputs are total unique downloads and unique listeners from current and past quarter

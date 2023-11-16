@@ -181,7 +181,6 @@ def human_format(num):
     return '{}{}'.format('{:f}'.format(num).rstrip('0').rstrip('.'), ['', 'K', 'M', 'B', 'T'][magnitude])
 ```
 - human_format creates a format to convert the numerics of the report to specify if it is in the Thousands, millions etc.
-- 
 ```bash
 def check_up_down(str1,str2):
     if str1 == str2:
@@ -193,7 +192,21 @@ def check_up_down(str1,str2):
 - Need to manually sort Total, Facebook, Instagram, and Twitter Interactions in Excel sheet
 
 ### Comscore Functions
+```bash
+def difference(prev, curr):
+    return(abs(curr - prev))
+```
 - difference is used to determine how many spots an Outkick.com ranking has changed
+```bash
+
+def rise_drop(prev, curr):
+    if prev > curr:
+        return("""moved down """ + str(difference(prev,curr)) + """ spots  to #""" + str(curr))
+    elif prev == curr:
+        return("""remained in the """ + str(curr) + """spot""")
+    else:
+        return("""moved up """ + str(difference(prev,curr)) + """ spots  to #""" + str(curr))
+```
 - rise_drop returns proper html code depending on whether or not a ranking has increased or decreased
 
 
